@@ -2,7 +2,7 @@ def nyc_pigeon_organizer(data)
   pigeon_list = {}
   data.each{|details, value|
     value.each{|discription, names|
-      names.each do |name|
+      names.each{|name|
         if pigeon_list[name] == nil
           pigeon_list[name] = {}
         end
@@ -10,8 +10,8 @@ def nyc_pigeon_organizer(data)
           pigeon_list[name][details] = []
         end
         pigeon_list[name][details].push(discription)
-      end
-    end 
-  end
+      }
+    }
+  }
   pp pigeon_list
 end
