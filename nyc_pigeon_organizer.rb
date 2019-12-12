@@ -1,5 +1,6 @@
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
+  
   data.each{|details, value|
     value.each{|discription, names|
       names.each{|name|
@@ -13,6 +14,6 @@ def nyc_pigeon_organizer(data)
       }
     }
   }
-  pp pigeon_list
+  
   pigeon_list
 end
