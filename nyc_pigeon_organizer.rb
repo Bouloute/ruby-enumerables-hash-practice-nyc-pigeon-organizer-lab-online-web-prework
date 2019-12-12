@@ -1,28 +1,17 @@
 def nyc_pigeon_organizer(data)
-  new_hash = {}
-  test_hash = {}
- # pp data
-  data.each{|discription, detail_discription|
-    detail_discription.each{|details, names|
-      new_hash = {}
-      
-      
-      names.each{|name, testing|
-      
-      #new_hash = {name => { discription => details}}
-        #new_hash[name] = {discription => details}
-        #new_hash[name][discription] = details
-        method_test(discription, details)
-        #new_hash[discription] = details
-        test_hash[name] = method_test(discription, details)
-      }
-      
-    }
-  }
-  pp test_hash
-end
-
-def method_test(discription, details)
-  new_hash[discription] = details
-
+  pigeon_list = {}
+  data.each do |details, value|
+    value.each do |discription, names|
+      names.each do |name|
+       # if pigeon_list[name] == nil
+          pigeon_list[name] = {}
+       # end
+        if pigeon_list[name][color_gender_lives] == nil
+          pigeon_list[name][color_gender_lives] = []
+        end
+        pigeon_list[name][color_gender_lives].push(stats.to_s)
+      end
+    end 
+  end
+  pigeon_list
 end
