@@ -3,12 +3,12 @@ def nyc_pigeon_organizer(data)
   data.each do |details, value|
     value.each do |discription, names|
       names.each do |name|
-       # if pigeon_list[name] == nil
+        if pigeon_list[name] == nil
           pigeon_list[name] = {}
-       # end
-       # if pigeon_list[name][details] == nil
+        end
+        if pigeon_list[name][details] == nil
           pigeon_list[name][details] = []
-      #  end
+        end
         pigeon_list[name][details].push(discription)
       end
     end 
